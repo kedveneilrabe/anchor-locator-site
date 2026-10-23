@@ -58,19 +58,19 @@
 </div>
 
 <h2 id="who">Who we are</h2>
-<p>Anchor Locator (the "extension") and this website are made by Kent Rabe, an independent developer based in the Philippines ("we", "us"). This policy explains what data the extension and website handle and why. If you have questions, <!-- CONTACT_EMAIL: swap to mailto when Kent provides it --><a href="https://github.com/kedveneilrabe/anchor-locator-site/issues" rel="noopener">Contact us</a><!-- /CONTACT_EMAIL -->.</p>
+<p>Anchor Locator (the "extension") and this website are made by Kent Rabe, an independent developer based in the Philippines ("we", "us"). This policy explains what data the extension and website handle and why. If you have questions, email <a href="mailto:kedveneilrabe@gmail.com">kedveneilrabe@gmail.com</a>.</p>
 
 <h2 id="local">Data that stays in your browser</h2>
 <p>To do its job, the extension works with the page you are testing. All of this processing happens locally, on your device:</p>
 <ul>
   <li><strong>Page content.</strong> When you pick a target and an anchor, the extension reads the structure and text of that page to build a locator. It is not stored or sent anywhere.</li>
   <li><strong>Recorded steps.</strong> Steps and assertions you record, and the scripts generated from them, are stored in your browser's extension storage.</li>
-  <li><strong>Settings and usage counter.</strong> Your preferences and the count of free Recorder steps used are stored in your browser's extension storage.</li>
+  <li><strong>Settings and usage counter.</strong> Your preferences and the count of free Recorder steps used are stored in your browser's extension storage. If Chrome Sync is on, the free-step counter and a browser-activation label sync through your Google account.</li>
 </ul>
-<p>None of this data is transmitted to us or to anyone else. You can delete it at any time by clearing your recordings in the extension or by uninstalling it.</p>
+<p>None of this data is transmitted to us or to anyone else, apart from Chrome Sync, if you use it. You can delete it at any time by clearing your recordings in the extension or by uninstalling it.</p>
 
 <h2 id="network">The only network call: Pro license checks</h2>
-<p>If you buy Pro, the extension contacts Lemon Squeezy's licensing service to activate and periodically validate your license key (Pro keeps working offline for up to 7 days between checks). This request contains only what is needed to validate the license, such as your license key and an identifier for the browser activation, so that a license can be used on up to 3 browsers.</p>
+<p>If you buy Pro, the extension contacts Lemon Squeezy's licensing service to activate and periodically validate your license key (Pro keeps working offline for up to 7 days between checks). To activate and check your license, the extension sends Lemon Squeezy your license key, along with an activation label like "Chrome on &lt;OS&gt;" plus a short random ID, and nothing else. Later checks send the license key with the activation ID Lemon Squeezy issued for that browser, which is how a license can be used on up to 3 browsers. If you deactivate Pro on a browser, the extension contacts Lemon Squeezy once more with your license key and that activation ID to free up the slot.</p>
 <p>The license check never includes your browsing history, the URLs you visit, page content or recorded steps. If you use the free features only, the extension makes no network requests at all.</p>
 
 <h2 id="none">What we don't do</h2>
@@ -92,17 +92,17 @@
 <p>The extension requests these permissions, used only for the purposes described:</p>
 <table>
   <tr><th>Permission</th><th>Why</th></tr>
-  <tr><td>activeTab, scripting</td><td>To inspect the page you are testing, highlight targets and anchors, and record steps.</td></tr>
+  <tr><td>scripting</td><td>To inject the extension's own packaged picker and recorder scripts into the page you're testing, so it can highlight targets and anchors and record steps.</td></tr>
   <tr><td>Access to all sites</td><td>The page you're testing could be on any URL, so the extension needs to be able to run on whichever page you open it on.</td></tr>
-  <tr><td>storage</td><td>To keep your recordings, settings and free-step counter in your browser.</td></tr>
+  <tr><td>storage</td><td>To keep your recordings, settings and free-step counter in your browser (the counter and activation label also sync through Chrome Sync, if you use it).</td></tr>
 </table>
 <p>The use of information received by the extension adheres to the Chrome Web Store User Data Policy, including its Limited Use requirements.</p>
 
 <h2 id="retention">Retention and deletion</h2>
-<p>Data stored in your browser stays there until you delete it or uninstall the extension. Purchase records are kept by Lemon Squeezy and by us for as long as needed to provide your license and to meet tax and accounting obligations. To ask us to delete the order information we hold, <!-- CONTACT_EMAIL: swap to mailto when Kent provides it --><a href="https://github.com/kedveneilrabe/anchor-locator-site/issues" rel="noopener">contact us</a><!-- /CONTACT_EMAIL -->.</p>
+<p>Data stored in your browser stays there until you delete it or uninstall the extension. Purchase records are kept by Lemon Squeezy and by us for as long as needed to provide your license and to meet tax and accounting obligations. To ask us to delete the order information we hold, email <a href="mailto:kedveneilrabe@gmail.com">kedveneilrabe@gmail.com</a>.</p>
 
 <h2 id="rights">Your rights</h2>
-<p>Depending on where you live, including under the Philippine Data Privacy Act of 2012 and the EU/UK GDPR, you may have the right to access, correct or delete personal data we hold about you, or to object to its processing. Because the extension keeps your data on your device, in most cases the only personal data we hold is the order information described above. To make a request, <!-- CONTACT_EMAIL: swap to mailto when Kent provides it --><a href="https://github.com/kedveneilrabe/anchor-locator-site/issues" rel="noopener">contact us</a><!-- /CONTACT_EMAIL -->.</p>
+<p>Depending on where you live, including under the Philippine Data Privacy Act of 2012 and the EU/UK GDPR, you may have the right to access, correct or delete personal data we hold about you, or to object to its processing. Because the extension keeps your data on your device, in most cases the only personal data we hold is the order information described above. To make a request, email <a href="mailto:kedveneilrabe@gmail.com">kedveneilrabe@gmail.com</a>.</p>
 
 <h2 id="children">Children</h2>
 <p>Anchor Locator is a developer tool and is not directed at children. We don't knowingly collect personal data from children.</p>
@@ -111,7 +111,7 @@
 <p>If we change how the extension handles data, we'll update this page and the date at the top before the change takes effect. Material changes will also be noted in the extension's release notes.</p>
 
 <h2 id="contact">Contact</h2>
-<p>Questions about privacy? <!-- CONTACT_EMAIL: swap to mailto when Kent provides it --><a href="https://github.com/kedveneilrabe/anchor-locator-site/issues" rel="noopener">Contact us</a><!-- /CONTACT_EMAIL -->.</p>
+<p>Questions about privacy? Email <a href="mailto:kedveneilrabe@gmail.com">kedveneilrabe@gmail.com</a>.</p>
 
     </article>
   </div>
@@ -145,7 +145,7 @@
       <div>
         <h4>Contact</h4>
         <ul>
-          <li><!-- CONTACT_EMAIL: swap to mailto when Kent provides it --><a href="https://github.com/kedveneilrabe/anchor-locator-site/issues" rel="noopener">Contact us</a><!-- /CONTACT_EMAIL --></li>
+          <li><a href="mailto:kedveneilrabe@gmail.com">kedveneilrabe@gmail.com</a></li>
           <li>Kent Rabe, Philippines</li>
         </ul>
       </div>
