@@ -218,3 +218,12 @@ section{padding:92px 0}
 @media (max-width:760px){.btn{white-space:normal;text-align:center}.codeblock{font-size:.8rem}}
 .codeblock{white-space:pre-wrap;overflow-wrap:anywhere}
 .xpath-card .body{padding:22px}
+
+/* Recorder: text left, larger screenshot right */
+#recorder .container{width:min(1360px,100% - 40px)}
+.feature.feature-rec{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px}
+.shot-side{margin:0}
+.shot-side img{display:block;width:100%;height:auto}
+.shot-side a{display:block}
+.shot-side figcaption a{display:inline;color:var(--blue)}
+@media (max-width:980px){.feature.feature-rec{grid-template-columns:1fr;gap:36px}}
