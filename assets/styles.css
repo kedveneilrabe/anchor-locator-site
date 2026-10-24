@@ -218,3 +218,11 @@ section{padding:92px 0}
 @media (max-width:760px){.btn{white-space:normal;text-align:center}.codeblock{font-size:.8rem}}
 .codeblock{white-space:pre-wrap;overflow-wrap:anywhere}
 .xpath-card .body{padding:22px}
+
+/* Recorder screenshot: full container width so the code stays legible */
+.feature-solo{grid-template-columns:1fr}
+.feature-solo .feature-text{max-width:760px}
+.shot-wide{margin:32px 0 0}
+.shot-wide img{display:block;width:100%;height:auto}
+.shot-wide a{display:block}
+.shot-wide figcaption a{display:inline;color:var(--blue)}
