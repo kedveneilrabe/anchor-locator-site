@@ -171,10 +171,10 @@
 import { test, expect } from '@playwright/test';
 
 test('recorded test', async ({ page }) =&gt; {
-  await page.getByLabel("Email").fill("kent@example.com");
+  await page.getByLabel("Email").fill("kent@quillfern.test");
   await page.getByLabel("Password").fill(process.env.PASSWORD ?? ''); // ••••••••
-  await page.locator("xpath=//h3[normalize-space(text())='Team plan']/following-sibling::button[1]").click();
-  await expect(page.getByText("Added Team plan", { exact: true })).toContainText("Added Team plan");
+  await page.locator("xpath=//p[normalize-space(text())='$12']/following-sibling::button[1]").click();
+  await expect(page.getByRole("heading", { name: "Team plan" })).toContainText("Team plan");
 });</div>
     <p class="codenote" style="margin-top:10px;color:var(--muted,#5b6b86);font-size:.92rem">Playwright uses getBy… locators where they're unique; where they aren't, your anchor XPath.</p>
   </div>
