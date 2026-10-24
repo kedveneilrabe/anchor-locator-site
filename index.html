@@ -153,11 +153,11 @@
     <div class="feature" style="margin-top:0">
       <div class="feature-text">
         <span class="kicker">The Recorder</span>
-        <h3>Record a flow. Export a script.</h3>
-        <p>Record a flow, including assertions (visible, text, value, attribute), and export it to Playwright, Selenium or Cypress. Each export follows its framework's conventions:</p>
+        <h3>Record once. Export clean Playwright.</h3>
+        <p>Record a flow, including assertions, and export it as Playwright TypeScript. Prefer Selenium or Cypress? Same recording, one click. Each export follows its framework's conventions:</p>
         <ul>
-          <li><strong>Selenium</strong> uses axes-based XPath.</li>
           <li><strong>Playwright</strong> uses its built-in <code>getBy…</code> locators with an XPath fallback.</li>
+          <li><strong>Selenium</strong> uses axes-based XPath.</li>
           <li><strong>Cypress</strong> uses CSS selectors through <code>cy.get</code> and <code>cy.contains</code>, with no plugin to install.</li>
         </ul>
         <div class="fw"><span>Playwright <em>TypeScript</em></span><span>Selenium <em>Java · Python · C#</em></span><span>Cypress</span></div>
@@ -165,9 +165,16 @@
       </div>
       <figure class="shot"><img src="assets/ui-recorder.png" loading="lazy" width="1280" height="500" alt="Recorder panel showing a recorded flow exported as Selenium Python with axes-based XPath locators"><figcaption>Real capture: a recorded flow exported to Selenium (Python).</figcaption></figure>
     </div>
-    <div class="codeblock" aria-label="Excerpt of a real Selenium Python export"><span class="c"># Excerpt from a real Selenium (Python) export</span>
-driver.find_element(By.XPATH, "//label[normalize-space(.)='Email']/following::input[1]").send_keys("kent@example.com")
-driver.find_element(By.XPATH, "//label[normalize-space(.)='Password']/following::input[1]").send_keys("s3cret-pass")</div>
+    <div class="codeblock" aria-label="Excerpt of a real Playwright TypeScript export"><span class="c">// Excerpt from a real Playwright (TypeScript) export</span>
+import { test, expect } from '@playwright/test';
+
+test('recorded test', async ({ page }) =&gt; {
+  await page.getByLabel("Email").fill("kent@example.com");
+  await page.getByLabel("Password").fill(process.env.PASSWORD ?? ''); // ••••••••
+  await page.locator("xpath=//h3[normalize-space(text())='Team plan']/following-sibling::button[1]").click();
+  await expect(page.getByText("Added Team plan", { exact: true })).toContainText("Added Team plan");
+});</div>
+    <p class="codenote" style="margin-top:10px;color:var(--muted,#5b6b86);font-size:.92rem">Playwright uses getBy… locators where they're unique; where they aren't, your anchor XPath.</p>
   </div>
 </section>
 
