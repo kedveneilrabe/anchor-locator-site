@@ -219,10 +219,11 @@ section{padding:92px 0}
 .codeblock{white-space:pre-wrap;overflow-wrap:anywhere}
 .xpath-card .body{padding:22px}
 
-/* Recorder screenshot: full container width so the code stays legible */
-.feature-solo{grid-template-columns:1fr}
-.feature-solo .feature-text{max-width:760px}
-.shot-wide{margin:32px 0 0}
-.shot-wide img{display:block;width:100%;height:auto}
-.shot-wide a{display:block}
-.shot-wide figcaption a{display:inline;color:var(--blue)}
+/* Recorder: text left, larger screenshot right */
+#recorder .container{width:min(1360px,100% - 40px)}
+.feature.feature-rec{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px}
+.shot-side{margin:0}
+.shot-side img{display:block;width:100%;height:auto}
+.shot-side a{display:block}
+.shot-side figcaption a{display:inline;color:var(--blue)}
+@media (max-width:980px){.feature.feature-rec{grid-template-columns:1fr;gap:36px}}
