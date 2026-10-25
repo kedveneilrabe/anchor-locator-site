@@ -28,8 +28,7 @@
       <a href="#recorder">Recorder</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
-      <!-- TODO: Chrome Web Store URL. Point this "Add to Chrome" button at the listing once it is live. -->
-      <a class="btn btn-primary btn-sm" href="#pricing">Add to Chrome</a>
+      <a class="btn btn-primary btn-sm" href="https://chromewebstore.google.com/detail/blaibbahmbkdkdgkabjlbpgdcldlmadg" target="_blank" rel="noopener">Add to Chrome</a>
     </nav>
   </div>
 </header>
@@ -42,8 +41,7 @@
       <h1>Anchor to what <span class="hl">doesn't change.</span></h1>
       <p class="lead">Anchor Locator lets you build locators from the element you trust. Pick any stable element on the page as your anchor, and get readable XPath that keeps working when IDs and classes change.</p>
       <div class="cta-row">
-        <!-- TODO: Chrome Web Store URL. "Add to Chrome" must point at the listing once live; harmless #pricing anchor for now. -->
-<a class="btn btn-primary" href="#pricing">Add to Chrome — it's free</a>
+<a class="btn btn-primary" href="https://chromewebstore.google.com/detail/blaibbahmbkdkdgkabjlbpgdcldlmadg" target="_blank" rel="noopener">Add to Chrome — it's free</a>
         <a class="btn btn-outline-light" href="#how">See how it works ↓</a>
       </div>
       <ul class="trust">
@@ -78,7 +76,7 @@
       <li class="step"><h3>Copy your locator</h3><p>Get readable, axes-based XPath. Or record the whole flow with the Recorder and export it to Playwright, Selenium or Cypress.</p></li>
     </ol>
 
-    <div class="feature">
+    <div class="feature feature-rec">
       <div class="feature-text">
         <span class="kicker">Resilient XPath, generated for you</span>
         <h3>Built on what users see.</h3>
@@ -89,10 +87,10 @@
           <li><code>normalize-space()</code> ignores stray whitespace and line breaks in the label text.</li>
         </ul>
       </div>
-      <figure class="shot"><img src="assets/ui-email-anchor.png" loading="lazy" width="1280" height="650" alt="Email input selected as the target and the Email label as the anchor, with the axes XPath underneath"><figcaption>Real capture: target = Email input, anchor = "Email" label.</figcaption></figure>
+      <figure class="shot shot-side"><a href="assets/ui-email-anchor.png" target="_blank" rel="noopener" title="Open full size"><img src="assets/ui-email-anchor.png" loading="lazy" width="1800" height="880" alt="Email input selected as the target and the Email label as the anchor, with the axes XPath underneath"></a></figure>
     </div>
 
-    <div class="feature rev">
+    <div class="feature rev feature-rec">
       <div class="feature-text">
         <span class="kicker">Any element, your call</span>
         <h3>Re-pick the anchor, get a new locator.</h3>
@@ -103,10 +101,10 @@
           <li>You see the exact XPath, so you can commit it, review it and own it.</li>
         </ul>
       </div>
-      <figure class="shot"><img src="assets/ui-any-anchor.png" loading="lazy" width="1280" height="650" alt="The same Email target with the Password label picked as the anchor, producing a preceding axis XPath"><figcaption>Real capture: same target, different anchor.</figcaption></figure>
+      <figure class="shot shot-side"><a href="assets/ui-any-anchor.png" target="_blank" rel="noopener" title="Open full size"><img src="assets/ui-any-anchor.png" loading="lazy" width="1800" height="880" alt="The same Email target with the Password label picked as the anchor, producing a preceding axis XPath"></a></figure>
     </div>
 
-    <div class="feature">
+    <div class="feature feature-rec">
       <div class="feature-text">
         <span class="kicker">Survives UI refactors</span>
         <h3>Your UI changed. Your locator didn't need to.</h3>
@@ -116,17 +114,17 @@
           <li>Check it yourself with <code>$x()</code> in the DevTools console.</li>
         </ul>
       </div>
-      <figure class="shot"><img src="assets/ui-refactor.png" loading="lazy" width="1280" height="600" alt="Before and after a refactor: the axes XPath finds the Email field in both versions while the ID locator finds nothing after the refactor"><figcaption>Before and after a rebuild of the same page.</figcaption></figure>
+      <figure class="shot shot-side"><a href="assets/ui-refactor.png" target="_blank" rel="noopener" title="Open full size"><img src="assets/ui-refactor.png" loading="lazy" width="1800" height="960" alt="Before and after a rebuild: the same axes XPath finds the Email field in both versions while its ID changes from input-423 to input-871"></a></figure>
     </div>
 
-    <div class="feature rev">
+    <div class="feature rev feature-rec">
       <div class="feature-text">
         <span class="kicker">Anchor on meaning, not position</span>
         <h3>Identical buttons, one meaningful anchor.</h3>
         <p>Three cards, three "Add to cart" buttons. An index like <code>(//button[normalize-space(.)='Add to cart'])[2]</code> points at whatever ends up second. Anchor on the card title instead, and the locator follows the card when they're reordered:</p>
         <div class="codeblock">//h3[normalize-space(text())='Team plan']/following-sibling::button[1]</div>
       </div>
-      <figure class="shot"><img src="assets/ui-team-plan.png" loading="lazy" width="1280" height="650" alt="Card grid with the Team plan heading as the anchor and its Add to cart button as the target"><figcaption>Real capture: target = Team plan "Add to cart", anchor = "Team plan" title.</figcaption></figure>
+      <figure class="shot shot-side"><a href="assets/ui-team-plan.png" target="_blank" rel="noopener" title="Open full size"><img src="assets/ui-team-plan.png" loading="lazy" width="1800" height="880" alt="Card grid with the Team plan heading as the anchor and its Add to cart button as the target"></a></figure>
     </div>
   </div>
 </section>
@@ -150,24 +148,33 @@
 
 <section id="recorder">
   <div class="container">
-    <div class="feature" style="margin-top:0">
+    <div class="feature feature-rec" style="margin-top:0">
       <div class="feature-text">
         <span class="kicker">The Recorder</span>
         <h3>Record a flow. Export a script.</h3>
-        <p>Record a flow, including assertions (visible, text, value, attribute), and export it to Playwright, Selenium or Cypress. Each export follows its framework's conventions:</p>
+        <p>Record a flow, including assertions, and export it as Playwright TypeScript. Prefer Selenium or Cypress? Same recording, one click. Each export follows its framework's conventions:</p>
         <ul>
-          <li><strong>Selenium</strong> uses axes-based XPath.</li>
           <li><strong>Playwright</strong> uses its built-in <code>getBy…</code> locators with an XPath fallback.</li>
-          <li><strong>Cypress</strong> uses CSS selectors through <code>cy.get</code> and <code>cy.contains</code>, with no plugin to install.</li>
+          <li><strong>Selenium</strong> uses axes-based XPath.</li>
+          <li><strong>Cypress</strong> uses CSS selectors through <code>cy.get</code> and <code>cy.contains</code>, with no plugin to install. Recorded passwords are typed with <code>{ log: false }</code>, so they stay out of the Cypress command log.</li>
         </ul>
+        <h4 style="margin:18px 0 6px">Change the anchor on any step</h4>
+        <p>The Recorder picks a locator for each step. Don't like it? Click Set anchor on that step, in the main panel or the expanded view, then click any element on the page. The step's locator becomes an XPath relative to your anchor (a <code>cy.contains</code> chain in Cypress). Undo or Reset to auto any time. Changing an anchor doesn't use a free step.</p>
         <div class="fw"><span>Playwright <em>TypeScript</em></span><span>Selenium <em>Java · Python · C#</em></span><span>Cypress</span></div>
         <p style="margin-top:20px">Try it free for 10 recorded steps, with every Recorder feature and all three export formats included. Pro unlocks unlimited steps.</p>
       </div>
-      <figure class="shot"><img src="assets/ui-recorder.png" loading="lazy" width="1280" height="500" alt="Recorder panel showing a recorded flow exported as Selenium Python with axes-based XPath locators"><figcaption>Real capture: a recorded flow exported to Selenium (Python).</figcaption></figure>
+      <figure class="shot shot-side"><a href="assets/ui-recorder.png" target="_blank" rel="noopener" title="Open full size"><img src="assets/ui-recorder.png" loading="lazy" width="1800" height="916" alt="Recorder panel showing a recorded flow exported as Playwright TypeScript"></a></figure>
     </div>
-    <div class="codeblock" aria-label="Excerpt of a real Selenium Python export"><span class="c"># Excerpt from a real Selenium (Python) export</span>
-driver.find_element(By.XPATH, "//label[normalize-space(.)='Email']/following::input[1]").send_keys("kent@example.com")
-driver.find_element(By.XPATH, "//label[normalize-space(.)='Password']/following::input[1]").send_keys("s3cret-pass")</div>
+    <div class="codeblock" aria-label="Excerpt of a real Playwright TypeScript export"><span class="c">// Exported by Anchor Locator (Playwright, TypeScript)</span>
+import { test, expect } from '@playwright/test';
+
+test('recorded test', async ({ page }) =&gt; {
+  await page.getByLabel("Email").fill("kent@quillfern.test");
+  await page.getByLabel("Password").fill(process.env.PASSWORD ?? ''); // ••••••••
+  await page.locator("xpath=//h3[normalize-space(text())='Team plan']/following-sibling::button[1]").click();
+  await expect(page.getByRole("heading", { name: "Team plan" })).toContainText("Team plan");
+});</div>
+    <p class="codenote" style="margin-top:10px;color:var(--muted,#5b6b86);font-size:.92rem">Playwright uses getBy… locators where they're unique; where they aren't, your anchor XPath.</p>
   </div>
 </section>
 
@@ -191,8 +198,7 @@ driver.find_element(By.XPATH, "//label[normalize-space(.)='Password']/following:
           <li>Export to Playwright, Selenium and Cypress</li>
           <li>Everything you record stays exportable</li>
         </ul>
-        <!-- TODO: Chrome Web Store URL. "Add to Chrome" must point at the listing once live; harmless #pricing anchor for now. -->
-<a class="btn btn-ghost btn-block" href="#pricing">Add to Chrome — it's free</a>
+<a class="btn btn-ghost btn-block" href="https://chromewebstore.google.com/detail/blaibbahmbkdkdgkabjlbpgdcldlmadg" target="_blank" rel="noopener">Add to Chrome — it's free</a>
       </div>
       <div class="plan">
         <h3>Pro Monthly</h3>
@@ -205,8 +211,7 @@ driver.find_element(By.XPATH, "//label[normalize-space(.)='Password']/following:
           <li>Works offline up to 7 days between license checks</li>
           <li>14-day refund, no questions asked</li>
         </ul>
-        <!-- TODO: checkout URL. Replace #pricing with the Lemon Squeezy checkout link for this plan. Does not purchase anything yet. -->
-<a class="btn btn-ghost btn-block" href="#pricing">Get Pro Monthly</a>
+        <a class="btn btn-ghost btn-block" href="https://anchorlocator.lemonsqueezy.com/checkout/buy/556dce0d-5899-450f-9603-64f5c2063c1e" rel="noopener">Get Pro Monthly</a>
       </div>
       <div class="plan featured">
         <span class="badge">One payment</span>
@@ -219,8 +224,7 @@ driver.find_element(By.XPATH, "//label[normalize-space(.)='Password']/following:
           <li>Every future Pro feature included</li>
           <li>14-day refund, no questions asked</li>
         </ul>
-        <!-- TODO: checkout URL. Replace #pricing with the Lemon Squeezy checkout link for this plan. Does not purchase anything yet. -->
-<a class="btn btn-primary btn-block" href="#pricing">Get Pro Lifetime</a>
+        <a class="btn btn-primary btn-block" href="https://anchorlocator.lemonsqueezy.com/checkout/buy/31e232cc-ee20-471f-b88a-bc78eaacc360" rel="noopener">Get Pro Lifetime</a>
       </div>
     </div>
 
@@ -235,8 +239,8 @@ driver.find_element(By.XPATH, "//label[normalize-space(.)='Password']/following:
           <tr><td>Assertions (visible, text, value, attribute)</td><td><span class="yes">✓</span> count as steps</td><td><span class="yes">✓</span></td></tr>
           <tr><td>Export to Playwright, Selenium, Cypress</td><td><span class="yes">✓</span> included</td><td><span class="yes">✓</span></td></tr>
           <tr><td>Everything you've recorded stays exportable</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
-          <tr><td>Future Pro features</td><td>n/a</td><td><span class="yes">✓</span> Lifetime includes every future Pro feature</td></tr>
-          <tr><td>Refunds</td><td>n/a</td><td>Within 14 days, no questions asked</td></tr>
+          <tr><td>Future Pro features</td><td><span class="no" aria-label="Not included">✕</span></td><td><span class="yes">✓</span> Lifetime includes every future Pro feature</td></tr>
+          <tr><td>Refunds</td><td><span class="no" aria-label="Not included">✕</span></td><td>Within 14 days, no questions asked</td></tr>
           <tr><td>Works offline</td><td><span class="yes">✓</span></td><td>Up to 7 days between license checks</td></tr>
           <tr><td>Browsers</td><td>No limit</td><td>Up to 3 browsers per license</td></tr>
           <tr><td>No ads, no tracking</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
@@ -265,7 +269,7 @@ driver.find_element(By.XPATH, "//label[normalize-space(.)='Password']/following:
       <details><summary>Can I get a refund?</summary><p>Yes. Full refund within 14 days of purchase, no questions asked, on both Pro plans. See the <a href="refund.html">refund policy</a>.</p></details>
       <details><summary>How is payment handled?</summary><p>Payments are handled by Lemon Squeezy, our merchant of record, so your payment details go to Lemon Squeezy and never to us. After checkout you activate Pro in the extension with your license key.</p></details>
       <details><summary>What happens to my recordings if Pro ends?</summary><p>You keep them, and everything you've recorded stays exportable. New steps need an active Pro plan.</p></details>
-      <details><summary>Which frameworks can I export to, and what locators do they use?</summary><p>Playwright (TypeScript), Selenium (Java, Python, C#) and Cypress. Each export follows its framework's conventions. Selenium uses axes-based XPath. Playwright uses its built-in <code>getBy…</code> locators with an XPath fallback. Cypress uses CSS selectors through <code>cy.get</code> and <code>cy.contains</code>, so there's no XPath plugin to install. The Recorder picks its locators automatically. Free-select anchor is in the locator panel.</p></details>
+      <details><summary>Which frameworks can I export to, and what locators do they use?</summary><p>Playwright (TypeScript), Selenium (Java, Python, C#) and Cypress. Each export follows its framework's conventions. Selenium uses axes-based XPath. Playwright uses its built-in <code>getBy…</code> locators with an XPath fallback. Cypress uses CSS selectors through <code>cy.get</code> and <code>cy.contains</code>, so there's no XPath plugin to install. The Recorder picks locators automatically, and you can change any step's anchor yourself, with the same free-select flow as the locator panel.</p></details>
       <details><summary>What about privacy?</summary><p>The extension runs locally and page data never leaves your browser. There are no ads, no tracking and no analytics. The only network call is a license check with Lemon Squeezy, and only for Pro users. Buy buttons in the extension add a fixed label to the checkout link naming which button you clicked, so we can learn which upgrade prompts work. It never includes personal or page data. Details are in the <a href="privacy.html">privacy policy</a>.</p></details>
       <details><summary>Why does it ask for access to all sites?</summary><p>The extension requests scripting, storage and access to all sites. All-sites access is what lets it build locators and record on whichever page you're testing, since that could be any URL. Storage keeps your recordings and settings in your browser (the free-step counter also syncs through Chrome Sync, if you use it).</p></details>
       <details><summary>Playwright recommends role-based locators. Why XPath?</summary><p>When role and test-id locators are available, use them (Playwright exports from the Recorder do). The locator panel is for when they aren't: icon buttons with no text, clickable divs, vendor widgets, and apps without test IDs.</p></details>
@@ -279,8 +283,7 @@ driver.find_element(By.XPATH, "//label[normalize-space(.)='Password']/following:
     <h2>Pick the anchor. Keep the locator.</h2>
     <p>Anchor Locator is free on Chrome. Page data never leaves your browser. No ads.</p>
     <div class="cta-row">
-      <!-- TODO: Chrome Web Store URL. "Add to Chrome" must point at the listing once live; harmless #pricing anchor for now. -->
-<a class="btn btn-light" href="#pricing">Add to Chrome — it's free</a>
+<a class="btn btn-light" href="https://chromewebstore.google.com/detail/blaibbahmbkdkdgkabjlbpgdcldlmadg" target="_blank" rel="noopener">Add to Chrome — it's free</a>
       <a class="btn btn-outline-light" href="privacy.html">Privacy policy</a>
     </div>
   </div>
