@@ -232,7 +232,7 @@ section{padding:92px 0}
 @media (max-width:980px){.feature.rev.feature-rec,.feature.feature-rec{grid-template-columns:1fr;gap:36px}}
 
 
-/* Locator Audit (draft section; button stays visually disabled until checkout exists) */
+/* Locator Audit */
 .audit-intro{max-width:720px;margin:-8px auto 48px;text-align:center;color:var(--ink-2);font-size:1.04rem}
 .audit-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:22px;align-items:start}
 .audit-grid>*{min-width:0}
@@ -253,8 +253,6 @@ section{padding:92px 0}
 .audit-cta{max-width:640px;margin:36px auto 0;text-align:center}
 .audit-cta .btn{width:100%;max-width:520px;margin-inline:auto}
 .audit-cta .fine{margin:12px 0 0;color:var(--muted);font-size:.9rem;text-wrap:pretty}
-.btn[aria-disabled="true"]{pointer-events:none;cursor:not-allowed;background:#94a3b8;box-shadow:none;color:#fff}
-.btn[aria-disabled="true"]:hover{transform:none;background:#94a3b8;color:#fff}
 @media (max-width:960px){.audit-grid{grid-template-columns:1fr}}
 
 

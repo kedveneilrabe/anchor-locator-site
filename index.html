@@ -259,9 +259,8 @@ test('recorded test', async ({ page }) =&gt; {
 
 <section id="audit">
   <div class="container">
-    <!-- LOCATOR AUDIT (draft): Lumi section-2 copy is in; intake steps from that same
-         section are in. Do not merge until Kent approves the PR and the copy. The $79
-         Lemon Squeezy product is not set up yet, so the button must stay inert. -->
+    <!-- Locator Audit: $79 offer. Checkout is the published Lemon Squeezy product.
+         The intake page (audit-intake.html) is linked after checkout, not from here. -->
     <div class="section-head">
       <span class="kicker">Locator Audit</span>
       <h2>Locator Audit: $79</h2>
@@ -322,9 +321,7 @@ test('recorded test', async ({ page }) =&gt; {
     </div>
 
     <div class="audit-cta">
-      <!-- TODO: Lemon Squeezy checkout URL for $79 Locator Audit, after Kent approves -->
-      <a class="btn btn-primary btn-block" href="#" aria-disabled="true" tabindex="-1">Book a Locator Audit for $79</a>
-      <p class="fine">Checkout is not live. This button does not go to a payment page.</p>
+      <a class="btn btn-primary btn-block" href="https://anchorlocator.lemonsqueezy.com/checkout/buy/a46d8360-af40-434b-8199-7f314beadd9f" rel="noopener">Book a Locator Audit for $79</a>
       <p class="fine">One page or one flow, up to 15 locators. The 48-hour turnaround starts when your intake is complete. Refunds go through Lemon Squeezy to your original payment method; the included Lifetime Pro license is deactivated on refund, and anything already delivered is yours to keep.</p>
     </div>
   </div>
