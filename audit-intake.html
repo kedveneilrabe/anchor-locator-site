@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Locator Audit intake | Anchor Locator</title>
+<meta name="description" content="Send your Locator Audit request: HTML snippets, numbered screenshots and the details needed to start the audit.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0f1e3d">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Locator Audit intake | Anchor Locator">
+<meta property="og:description" content="Send your Locator Audit request: HTML snippets, numbered screenshots and the details needed to start the audit.">
+<meta property="og:image" content="assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html"><img src="assets/favicon.svg" alt="" width="32" height="32">Anchor Locator</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#recorder">Recorder</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#faq">FAQ</a>
+      <a class="btn btn-primary btn-sm" href="https://chromewebstore.google.com/detail/blaibbahmbkdkdgkabjlbpgdcldlmadg" target="_blank" rel="noopener">Add to Chrome</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="legal-hero">
+  <div class="container">
+    <span class="kicker">Locator Audit</span>
+    <h1>Send your audit request</h1>
+    <p>Thanks for your purchase. Fill in this short template and email it to Kent, with your HTML snippets and numbered screenshots attached. The 48-hour turnaround starts when your intake is complete.</p>
+  </div>
+</section>
+<section class="legal legal-single">
+  <div class="container">
+    <article class="prose">
+
+<h2 id="how-to-send">How to send pages safely</h2>
+<ul>
+  <li><strong>HTML snippets, not whole pages.</strong> In Chrome DevTools, right-click the target in Elements, then Copy &gt; Copy outerHTML. Copy from the nearest container that holds the target and the label or heading next to it (usually 2 to 4 levels up).</li>
+  <li><strong>Redact first.</strong> Replace names, emails, order numbers, prices, tokens and hidden input values with <code>REDACTED</code>. Keep tag names, attributes, classes, test ids and visible labels, since that's what locators use.</li>
+  <li><strong>Never send logins.</strong> Please don't send logins, passwords, API keys or access to your systems. We don't need them.</li>
+  <li><strong>Numbered screenshots.</strong> Attach full-page screenshots with the targets circled or numbered to match your locator list.</li>
+</ul>
+<p>Your files are deleted 30 days after delivery (or on refund), and they're never used in marketing, demos or public examples without your written permission.</p>
+
+<p class="intake-slots">If we're at capacity, we'll email you a start date within 24 hours, and the 48-hour clock starts then.</p>
+
+<h2 id="send">Send the request</h2>
+<p class="intake-note">Your email app will open. Attach your HTML snippets and screenshots before sending.</p>
+<p class="intake-cta"><a class="btn btn-primary" href="mailto:kedveneilrabe@gmail.com?subject=Locator%20Audit%20request%20-%20Order%20%23%3Corder%20number%3E&amp;body=Order%20number%3A%0AName%3A%0ACompany%3A%0AFramework%20%2B%20language%20%28Playwright%20%2F%20Selenium%20Java%7CPython%7CC%23%20%2F%20Cypress%20JS%29%3A%0AWhat%20the%20flow%20does%20%281-3%20sentences%29%3A%0AWhat%20goes%20wrong%20%28fails%20to%20find%20%2F%20clicks%20wrong%20element%20%2F%20passes%20on%20wrong%20element%20%2F%20breaks%20after%20deploys%20%2F%20other%29%3A%0APublic%20no-login%20URL%20%28optional%29%3A%0ATest%20file%20name%20%28attach%20it%20or%20paste%20the%20relevant%20part%29%3A%0ACurrent%20locators%20%28up%20to%2015%2C%20numbered%20to%20match%20the%20screenshots%29%3A%0A1.%0AStable%20labels%20or%20test%20ids%20%28optional%29%3A%0AWhat%20changes%20between%20deploys%20%28optional%29%3A%0AAttachments%3A%20%5B%20%5D%20HTML%20snippets%20%5B%20%5D%20numbered%20screenshots%20%5B%20%5D%20test%20file%0A%5B%20%5D%20I%20removed%20passwords%2C%20tokens%2C%20customer%20data%20and%20anything%20confidential.%0A%5B%20%5D%20I%20have%20the%20right%20to%20share%20this%20HTML%20for%20this%20audit.">Send my audit request</a></p>
+
+<div class="intake-template-head">
+  <h2 id="template">Email template</h2>
+  <button type="button" class="btn btn-ghost btn-sm" id="copy-template">Copy template</button>
+</div>
+<p>If your email app doesn't open, or the message is cut off, copy this template into a new email to <a href="mailto:kedveneilrabe@gmail.com">kedveneilrabe@gmail.com</a>.</p>
+<pre class="intake-template" id="intake-template">To: kedveneilrabe@gmail.com
+Subject: Locator Audit request - Order #&lt;order number&gt;
+
+Order number:
+Name:
+Company:
+Framework + language (Playwright / Selenium Java|Python|C# / Cypress JS):
+What the flow does (1-3 sentences):
+What goes wrong (fails to find / clicks wrong element / passes on wrong element / breaks after deploys / other):
+Public no-login URL (optional):
+Test file name (attach it or paste the relevant part):
+Current locators (up to 15, numbered to match the screenshots):
+1.
+Stable labels or test ids (optional):
+What changes between deploys (optional):
+Attachments: [ ] HTML snippets [ ] numbered screenshots [ ] test file
+[ ] I removed passwords, tokens, customer data and anything confidential.
+[ ] I have the right to share this HTML for this audit.</pre>
+
+    </article>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html"><img src="assets/favicon.svg" alt="" width="32" height="32">Anchor Locator</a>
+        <p class="about">Resilient, readable XPath from any anchor you pick, plus a Recorder that exports Playwright, Selenium and Cypress scripts. Page data never leaves your browser.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="index.html#how">How it works</a></li>
+          <li><a href="index.html#recorder">Recorder</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy policy</a></li>
+          <li><a href="terms.html">Terms of service</a></li>
+          <li><a href="refund.html">Refund policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:kedveneilrabe@gmail.com">kedveneilrabe@gmail.com</a></li>
+          <li>Kent Rabe, Philippines</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year>2026</span> Kent Rabe. Anchor Locator is an independent product and is not affiliated with Google.</span>
+      <span>Payments processed by Lemon Squeezy, our merchant of record.</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+<script>
+(function () {
+  var btn = document.getElementById("copy-template");
+  var src = document.getElementById("intake-template");
+  if (!btn || !src) return;
+  var label = btn.textContent;
+  function setLabel(text) {
+    btn.textContent = text;
+    window.setTimeout(function () { btn.textContent = label; }, 2000);
+  }
+  btn.addEventListener("click", function () {
+    var text = src.textContent;
+    function ok() { setLabel("Copied"); }
+    function fail() { setLabel("Copy failed — select the text instead"); }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(ok, fail);
+    } else {
+      try {
+        var area = document.createElement("textarea");
+        area.value = text;
+        area.setAttribute("readonly", "");
+        area.style.position = "fixed";
+        area.style.left = "-9999px";
+        document.body.appendChild(area);
+        area.select();
+        var copied = document.execCommand("copy");
+        document.body.removeChild(area);
+        if (copied) ok(); else fail();
+      } catch (e) {
+        fail();
+      }
+    }
+  });
+})();
+</script>
+</body>
+</html>
