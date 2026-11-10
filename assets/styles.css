@@ -230,3 +230,38 @@ section{padding:92px 0}
 
 .feature.rev.feature-rec{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
 @media (max-width:980px){.feature.rev.feature-rec,.feature.feature-rec{grid-template-columns:1fr;gap:36px}}
+
+
+/* Locator Audit */
+.audit-intro{max-width:720px;margin:-8px auto 48px;text-align:center;color:var(--ink-2);font-size:1.04rem}
+.audit-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:22px;align-items:start}
+.audit-grid>*{min-width:0}
+.audit-grid .plan{padding-top:38px}
+.audit-panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px}
+.audit-panel h3{margin:0 0 14px;font-size:1.15rem}
+.audit-panel .audit-subhead{margin-top:28px}
+.audit-panel p{margin:0;color:var(--ink-2);font-size:.97rem}
+.audit-list{list-style:none;padding:0;margin:0}
+.audit-list li{position:relative;padding-left:28px;margin:11px 0;color:var(--ink-2);font-size:.97rem}
+.audit-list li::before{content:"";position:absolute;left:0;top:.45em;width:8px;height:8px;border-radius:50%;background:var(--blue)}
+.audit-exclude li::before{background:var(--muted)}
+.audit-note{margin-top:18px;color:var(--ink-2);font-size:.97rem}
+.audit-steps{list-style:none;padding:0;margin:0;counter-reset:as}
+.audit-steps li{position:relative;padding-left:42px;margin:14px 0;color:var(--ink-2);font-size:.97rem}
+.audit-steps li::before{counter-increment:as;content:counter(as);position:absolute;left:0;top:.05em;width:28px;height:28px;border-radius:8px;display:grid;place-items:center;background:var(--blue);color:#fff;font-weight:800;font-size:.85rem}
+.audit-slots{margin:18px 0 0;padding:14px 16px;background:#effaf8;border:1px solid #bfeee7;border-radius:12px;color:#134e48;font-size:.97rem}
+.audit-cta{max-width:640px;margin:36px auto 0;text-align:center}
+.audit-cta .btn{width:100%;max-width:520px;margin-inline:auto}
+.audit-cta .fine{margin:12px 0 0;color:var(--muted);font-size:.9rem;text-wrap:pretty}
+@media (max-width:960px){.audit-grid{grid-template-columns:1fr}}
+
+
+/* Locator Audit intake (post-checkout page; not linked from the homepage) */
+.legal-single .container{grid-template-columns:minmax(0,760px);justify-content:center}
+.legal-single .container>*{min-width:0}
+.intake-note{margin:0 0 14px;color:var(--ink-2)}
+.intake-cta{margin:8px 0 36px}
+.intake-template-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:28px 0 10px}
+.intake-template-head h2{margin:0}
+.intake-template{background:var(--bg-soft);border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-family:var(--mono);font-size:.88rem;line-height:1.55;white-space:pre-wrap;overflow-wrap:anywhere;color:var(--ink);margin:0}
+.intake-slots{margin:22px 0 28px;padding:14px 16px;background:#effaf8;border:1px solid #bfeee7;border-radius:12px;color:#134e48}
