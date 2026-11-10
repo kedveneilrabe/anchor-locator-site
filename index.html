@@ -259,39 +259,73 @@ test('recorded test', async ({ page }) =&gt; {
 
 <section id="audit">
   <div class="container">
-    <!-- LOCATOR AUDIT (draft): Lumi owns marketing copy; Nova owns intake details.
-         Do not merge until Kent approves the PR and the copy. The $79 Lemon Squeezy
-         product is not set up yet, so the button must stay inert. -->
+    <!-- LOCATOR AUDIT (draft): Lumi section-2 copy is in; intake steps from that same
+         section are in. Do not merge until Kent approves the PR and the copy. The $79
+         Lemon Squeezy product is not set up yet, so the button must stay inert. -->
     <div class="section-head">
       <span class="kicker">Locator Audit</span>
-      <!-- LUMI COPY: headline -->
-      <h2 class="placeholder-copy">[LUMI COPY: headline]</h2>
-      <!-- LUMI COPY: body -->
-      <p class="placeholder-copy">[LUMI COPY: body]</p>
+      <h2>Locator Audit: $79</h2>
+      <p>Send me the locators that keep breaking on one page. I'll send back resilient XPath rewrites and a ready-to-run script in your framework within 48 hours.</p>
     </div>
-    <div class="audit-wrap">
+    <p class="audit-intro">I'm the solo developer of Anchor Locator. Flaky locators usually come from the same few patterns: positional indexes, generated IDs and hashed classes. In a Locator Audit, I rewrite yours to anchor on things that rarely change, like a visible label, a heading or a test id, and explain why each old one was fragile.</p>
+
+    <div class="audit-grid">
       <div class="plan featured">
-        <span class="badge">$79 · delivered by Kent</span>
-        <h3>Locator Audit</h3>
-        <p class="sub">One page or test suite, returned within 48 hours.</p>
+        <span class="badge">Delivered by Kent</span>
+        <h3>What you get</h3>
         <div class="price"><b>$79</b><span>one audit</span></div>
-        <!-- Draft offer points (Kent-approved). Replace or rewrite when Lumi's copy lands. -->
         <ul>
-          <li>Send one page or test suite with flaky locators</li>
-          <li>Within 48 hours, get rewritten, resilient XPaths</li>
-          <li>Plus a recorded script in Playwright, Selenium or Cypress</li>
-          <li>Lifetime Pro included</li>
-          <li>Delivered by Kent personally</li>
+          <li>Up to 15 locators rewritten for one page, or one test file covering one flow</li>
+          <li><code>locators.md</code>: for each locator, the current one, the rewritten XPath, the anchor element it uses, and one plain sentence on why it's more stable</li>
+          <li>A ready-to-run script in your framework, up to 20 steps (assertions count as steps), recorded in your choice of Playwright, Selenium (Java, Python or C#) or Cypress. Secrets appear as environment variables, never as literal values.</li>
+          <li><code>notes.md</code>: up to 3 patterns that made the old locators fragile, and how to avoid them in new tests</li>
+          <li>One free revision round, requested within 7 days of delivery</li>
+          <li>A Lifetime Pro license key, sent at purchase (works on 3 browsers)</li>
         </ul>
-        <!-- NOVA: intake steps / what to send / how to send it -->
-        <div class="audit-intake placeholder-copy">
-          <h4>How to send your audit</h4>
-          <p>[NOVA: intake steps / what to send / how to send it]</p>
-        </div>
-        <!-- TODO: Lemon Squeezy checkout URL for $79 Locator Audit, after Kent approves -->
-        <a class="btn btn-primary btn-block" href="#" aria-disabled="true" tabindex="-1">Not available yet</a>
-        <p class="fine">Checkout is not live. This button does not go to a payment page.</p>
       </div>
+      <div class="audit-panel">
+        <h3>How it works</h3>
+        <ol class="audit-steps">
+          <li>Buy the audit. Your Lifetime Pro key arrives right away, with a link to the intake form.</li>
+          <li>Fill in the intake form: your framework, what the flow does, the locators that fail, HTML snippets and marked-up screenshots.</li>
+          <li>I confirm your intake is complete. Your 48 hours start then.</li>
+          <li>I rebuild your HTML snippets as a local page (or use a public, no-login URL if you have one), and check that each XPath matches exactly 1 element in the HTML you sent.</li>
+          <li>You run the script on your app. Anything that fails there gets fixed in your revision round.</li>
+        </ol>
+        <p class="audit-slots">If all 3 audit slots are full, we'll email you a start date within 24 hours; your 48 hours start then.</p>
+      </div>
+    </div>
+
+    <div class="audit-grid">
+      <div class="audit-panel">
+        <h3>What to send (and what not to)</h3>
+        <ul class="audit-list">
+          <li>HTML snippets, not whole pages. In Chrome DevTools, right-click the target in Elements, then Copy &gt; Copy outerHTML. Copy from a container 2 to 4 levels up that holds the target and the label or heading next to it.</li>
+          <li>Full-page screenshots with the targets circled or numbered to match your locator list.</li>
+          <li>Redact first: replace names, emails, order numbers, prices, tokens and hidden input values with <code>REDACTED</code>. Keep tag names, attributes, classes, test ids and visible labels, since that's what locators use.</li>
+          <li>Please don't send logins, passwords, API keys or access to your systems. We don't need them.</li>
+        </ul>
+        <p class="audit-note">Your files are deleted 30 days after delivery (or on refund), and they're never used in marketing, demos or public examples without your written permission.</p>
+      </div>
+      <div class="audit-panel">
+        <h3>Not included</h3>
+        <ul class="audit-list audit-exclude">
+          <li>Flakiness that isn't caused by locators, such as timing and waits, test data, environment, network or CI config</li>
+          <li>Canvas-drawn UI, images without DOM text, closed shadow roots, or cross-origin iframes we have no HTML for</li>
+          <li>Rewriting test logic, assertion design or page-object architecture</li>
+          <li>More than 15 locators or a second page (that's a second audit)</li>
+          <li>Any login, VPN, staging access or credentials</li>
+        </ul>
+        <h3 class="audit-subhead">Refunds</h3>
+        <p>14-day refund, no questions asked. If we miss the 48-hour turnaround, you can cancel for a full refund.</p>
+      </div>
+    </div>
+
+    <div class="audit-cta">
+      <!-- TODO: Lemon Squeezy checkout URL for $79 Locator Audit, after Kent approves -->
+      <a class="btn btn-primary btn-block" href="#" aria-disabled="true" tabindex="-1">Book a Locator Audit for $79</a>
+      <p class="fine">Checkout is not live. This button does not go to a payment page.</p>
+      <p class="fine">One page or one flow, up to 15 locators. The 48-hour turnaround starts when your intake is complete. Refunds go through Lemon Squeezy to your original payment method; the included Lifetime Pro license is deactivated on refund, and anything already delivered is yours to keep.</p>
     </div>
   </div>
 </section>

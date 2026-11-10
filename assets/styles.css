@@ -233,13 +233,26 @@ section{padding:92px 0}
 
 
 /* Locator Audit (draft section; button stays visually disabled until checkout exists) */
-.audit-wrap{max-width:520px;margin:0 auto}
-.audit-wrap .plan{padding-top:38px}
-.audit-intake{margin:0 0 22px;padding:14px 16px;border:1px dashed #cbd5e1;border-radius:12px;background:#f8fafc}
-.audit-intake h4{margin:0 0 6px;font-size:.95rem;color:var(--ink)}
-.audit-intake p{margin:0;color:var(--ink-2);font-size:.97rem}
-.placeholder-copy{box-shadow:inset 0 0 0 1px #e8c36a;background:rgba(245,195,91,.14);border-radius:8px}
-h2.placeholder-copy,p.placeholder-copy{padding:8px 12px}
+.audit-intro{max-width:720px;margin:-8px auto 48px;text-align:center;color:var(--ink-2);font-size:1.04rem}
+.audit-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:22px;align-items:start}
+.audit-grid>*{min-width:0}
+.audit-grid .plan{padding-top:38px}
+.audit-panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px}
+.audit-panel h3{margin:0 0 14px;font-size:1.15rem}
+.audit-panel .audit-subhead{margin-top:28px}
+.audit-panel p{margin:0;color:var(--ink-2);font-size:.97rem}
+.audit-list{list-style:none;padding:0;margin:0}
+.audit-list li{position:relative;padding-left:28px;margin:11px 0;color:var(--ink-2);font-size:.97rem}
+.audit-list li::before{content:"";position:absolute;left:0;top:.45em;width:8px;height:8px;border-radius:50%;background:var(--blue)}
+.audit-exclude li::before{background:var(--muted)}
+.audit-note{margin-top:18px;color:var(--ink-2);font-size:.97rem}
+.audit-steps{list-style:none;padding:0;margin:0;counter-reset:as}
+.audit-steps li{position:relative;padding-left:42px;margin:14px 0;color:var(--ink-2);font-size:.97rem}
+.audit-steps li::before{counter-increment:as;content:counter(as);position:absolute;left:0;top:.05em;width:28px;height:28px;border-radius:8px;display:grid;place-items:center;background:var(--blue);color:#fff;font-weight:800;font-size:.85rem}
+.audit-slots{margin:18px 0 0;padding:14px 16px;background:#effaf8;border:1px solid #bfeee7;border-radius:12px;color:#134e48;font-size:.97rem}
+.audit-cta{max-width:640px;margin:36px auto 0;text-align:center}
+.audit-cta .btn{width:100%;max-width:520px;margin-inline:auto}
+.audit-cta .fine{margin:12px 0 0;color:var(--muted);font-size:.9rem;text-wrap:pretty}
 .btn[aria-disabled="true"]{pointer-events:none;cursor:not-allowed;background:#94a3b8;box-shadow:none;color:#fff}
 .btn[aria-disabled="true"]:hover{transform:none;background:#94a3b8;color:#fff}
-#audit .plans, #audit .audit-wrap{min-width:0}
+@media (max-width:960px){.audit-grid{grid-template-columns:1fr}}
