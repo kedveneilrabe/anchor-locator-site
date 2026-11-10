@@ -27,6 +27,7 @@
       <a href="#how">How it works</a>
       <a href="#recorder">Recorder</a>
       <a href="#pricing">Pricing</a>
+      <a href="#audit">Locator Audit</a>
       <a href="#faq">FAQ</a>
       <a class="btn btn-primary btn-sm" href="https://chromewebstore.google.com/detail/blaibbahmbkdkdgkabjlbpgdcldlmadg" target="_blank" rel="noopener">Add to Chrome</a>
     </nav>
@@ -255,6 +256,46 @@ test('recorded test', async ({ page }) =&gt; {
   </div>
 </section>
 
+
+<section id="audit">
+  <div class="container">
+    <!-- LOCATOR AUDIT (draft): Lumi owns marketing copy; Nova owns intake details.
+         Do not merge until Kent approves the PR and the copy. The $79 Lemon Squeezy
+         product is not set up yet, so the button must stay inert. -->
+    <div class="section-head">
+      <span class="kicker">Locator Audit</span>
+      <!-- LUMI COPY: headline -->
+      <h2 class="placeholder-copy">[LUMI COPY: headline]</h2>
+      <!-- LUMI COPY: body -->
+      <p class="placeholder-copy">[LUMI COPY: body]</p>
+    </div>
+    <div class="audit-wrap">
+      <div class="plan featured">
+        <span class="badge">$79 · delivered by Kent</span>
+        <h3>Locator Audit</h3>
+        <p class="sub">One page or test suite, returned within 48 hours.</p>
+        <div class="price"><b>$79</b><span>one audit</span></div>
+        <!-- Draft offer points (Kent-approved). Replace or rewrite when Lumi's copy lands. -->
+        <ul>
+          <li>Send one page or test suite with flaky locators</li>
+          <li>Within 48 hours, get rewritten, resilient XPaths</li>
+          <li>Plus a recorded script in Playwright, Selenium or Cypress</li>
+          <li>Lifetime Pro included</li>
+          <li>Delivered by Kent personally</li>
+        </ul>
+        <!-- NOVA: intake steps / what to send / how to send it -->
+        <div class="audit-intake placeholder-copy">
+          <h4>How to send your audit</h4>
+          <p>[NOVA: intake steps / what to send / how to send it]</p>
+        </div>
+        <!-- TODO: Lemon Squeezy checkout URL for $79 Locator Audit, after Kent approves -->
+        <a class="btn btn-primary btn-block" href="#" aria-disabled="true" tabindex="-1">Not available yet</a>
+        <p class="fine">Checkout is not live. This button does not go to a payment page.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="faq">
   <div class="container">
     <div class="section-head">
@@ -303,6 +344,7 @@ test('recorded test', async ({ page }) =&gt; {
           <li><a href="#how">How it works</a></li>
           <li><a href="#recorder">Recorder</a></li>
           <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#audit">Locator Audit</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
       </div>
